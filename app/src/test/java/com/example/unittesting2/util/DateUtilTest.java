@@ -1,6 +1,5 @@
-package com.example.unittesting2.Util;
+package com.example.unittesting2.util;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 import org.junit.jupiter.api.TestReporter;
@@ -10,7 +9,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.Random;
 
-import static com.example.unittesting2.Util.DateUtil.*;
+import static com.example.unittesting2.util.DateUtil.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DateUtilTest {

@@ -1,4 +1,4 @@
-package com.example.unittesting2.Util;
+package com.example.unittesting2.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
