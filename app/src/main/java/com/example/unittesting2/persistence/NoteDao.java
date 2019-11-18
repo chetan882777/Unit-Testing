@@ -16,10 +16,10 @@ import io.reactivex.Single;
 public interface NoteDao {
 
     @Insert
-    Single<Integer> insertNote(Note note) throws Exception;
+    Single<Long> insertNote(Note note) throws Exception;
 
     @Query("SELECT * FROM note")
-    LiveData<List<Note>> getnotes();
+    LiveData<List<Note>> getNotes();
 
     @Delete
     Single<Integer> deleteNote(Note note) throws Exception;
