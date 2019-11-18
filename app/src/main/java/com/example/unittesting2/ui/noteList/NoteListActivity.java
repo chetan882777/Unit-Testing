@@ -1,10 +1,11 @@
-package com.example.unittesting2;
+package com.example.unittesting2.ui.noteList;
 
 import dagger.android.support.DaggerAppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.unittesting2.R;
 import com.example.unittesting2.repository.NoteRepository;
 
 import javax.inject.Inject;
