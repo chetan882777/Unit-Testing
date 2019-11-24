@@ -96,6 +96,8 @@ public class NoteRepository {
                 .toFlowable();
     }
 
+
+
     private void checkTitle(Note note) throws Exception {
         if(note.getTitle() == null){
             throw new Exception(NOTE_TITLE_NULL);
