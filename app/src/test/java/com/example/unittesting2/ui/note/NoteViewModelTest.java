@@ -3,11 +3,13 @@ package com.example.unittesting2.ui.note;
 import com.example.unittesting2.models.Note;
 import com.example.unittesting2.repository.NoteRepository;
 import com.example.unittesting2.ui.Resource;
+import com.example.unittesting2.util.InstantExecuterExtension;
 import com.example.unittesting2.util.LiveDataTestUtil;
 import com.example.unittesting2.util.TestUtil;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.function.Executable;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -24,6 +26,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.never;
 
+@ExtendWith(InstantExecuterExtension.class)
 public class NoteViewModelTest {
 
     // system under test
