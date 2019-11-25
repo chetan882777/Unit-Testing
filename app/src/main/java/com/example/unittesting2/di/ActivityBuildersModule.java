@@ -1,4 +1,5 @@
 package com.example.unittesting2.di;
+import com.example.unittesting2.ui.note.NoteActivity;
 import com.example.unittesting2.ui.noteList.NoteListActivity;
 
 import dagger.Module;
@@ -9,4 +10,7 @@ public abstract class ActivityBuildersModule {
 
     @ContributesAndroidInjector
     abstract NoteListActivity contributeNotesListActivity();
+
+    @ContributesAndroidInjector
+    abstract NoteActivity contributeNotesActivity();
 }
