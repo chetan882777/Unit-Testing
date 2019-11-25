@@ -88,7 +88,41 @@ public class NoteViewModel extends ViewModel {
 
 
 
-        return null;
+        return new NoteInsertUpdateHelper<Integer>() {
+            @Override
+            public void setNoteId(int noteId) {
+                isNewNote = false;
+                Note currentNote = note.getValue();
+                currentNote.setId(noteId);
+                note.setValue(currentNote);
+            }
+
+            @Override
+            public LiveData<Resource<Integer>> getAction() throws Exception {
+                if(isNewNote){
+                    return insertNote();
+                }
+                else{
+                    return updateNote();
+                }
+            }
+
+            @Override
+            public String defineAction() {
+                if(isNewNote){
+                    return ACTION_INSERT;
+                }
+                else{
+                    return ACTION_UPDATE;
+                }
+            }
+
+            @Override
+            public void onTransactionComplete() {
+                updateSubscription = null;
+                insertSubscription = null;
+            }
+        }.getAsLiveData();
     }
 
     private void cancelPendingTransactions(){
